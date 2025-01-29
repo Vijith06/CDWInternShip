@@ -22,27 +22,27 @@ def generate_poem(topic):
     })
     return response.content
 
-def generate_quiz(level,field):
-    '''
-    function to  generate quiz
+# def generate_quiz(level,field):
+#     '''
+#     function to  generate quiz
      
-    Args:
-        level(str)= Level of the quiz
-        fiels(str)=At which subject(like maths,science and etc..)
+#     Args:
+#         level(str)= Level of the quiz
+#         fiels(str)=At which subject(like maths,science and etc..)
 
-    Returns : 
-          response.content(str)
+#     Returns : 
+#           response.content(str)
 
-    '''
+#     '''
     
-    prompt_template=prompt.quiz_generator_prompt_from_hub()
-    llm=create_chat_groq()
+#     prompt_template=prompt.quiz_generator_prompt_from_hub()
+#     llm=create_chat_groq()
 
-    chain = prompt_template | llm
+#     chain = prompt_template | llm
 
-    response = chain.invoke({
-        "level" : level,
-        "field": field
-    })
+#     response = chain.invoke({
+#         "level" : level,
+#         "field": field
+#     })
     
-    return response.content
+#     return response.content
